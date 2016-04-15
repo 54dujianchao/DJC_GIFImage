@@ -1,12 +1,12 @@
 //
-//  YLGIFImage.m
-//  YLGIFImage
+//  DJC_GIFImage.m
+//  DJC_GIFImage
 //
-//  Created by Yong Li on 14-3-2.
-//  Copyright (c) 2014年 Yong Li. All rights reserved.
+//  Created by 杜建超 on 14-3-2.
+//  Copyright (c) 2014年 杜建超. All rights reserved.
 //
 
-#import "YLGIFImage.h"
+#import "DJC_GIFImage.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <ImageIO/ImageIO.h>
 
@@ -60,7 +60,7 @@ inline static BOOL isRetinaFilePath(NSString *path)
     return retinaSuffixRange.length && retinaSuffixRange.location != NSNotFound;
 }
 
-@interface YLGIFImage ()
+@interface DJC_GIFImage ()
 
 @property (nonatomic, readwrite) NSMutableArray *images;
 @property (nonatomic, readwrite) NSTimeInterval *frameDurations;
@@ -72,7 +72,7 @@ inline static BOOL isRetinaFilePath(NSString *path)
 
 static int _prefetchedNum = 10;
 
-@implementation YLGIFImage
+@implementation DJC_GIFImage
 {
     dispatch_queue_t readFrameQueue;
     CGImageSourceRef _imageSourceRef;

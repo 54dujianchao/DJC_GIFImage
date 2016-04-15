@@ -1,14 +1,14 @@
 //
-//  YLGIFImage.h
-//  YLGIFImage
+//  DJC_GIFImage.h
+//  DJC_GIFImage
 //
-//  Created by Yong Li on 14-3-2.
-//  Copyright (c) 2014年 Yong Li. All rights reserved.
+//  Created by 杜建超 on 14-3-2.
+//  Copyright (c) 2014年 杜建超. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface YLGIFImage : UIImage
+@interface DJC_GIFImage : UIImage
 
 ///-----------------------
 /// @name Image Attributes
