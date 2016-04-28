@@ -11,8 +11,7 @@
 #import <ImageIO/ImageIO.h>
 
 
-//Define FLT_EPSILON because, reasons.
-//Actually, I don't know why but it seems under certain circumstances it is not defined
+
 #ifndef FLT_EPSILON
 #define FLT_EPSILON __FLT_EPSILON__
 #endif
@@ -38,9 +37,7 @@ inline static NSTimeInterval CGImageSourceGetGifFrameDelay(CGImageSourceRef imag
     }
     
 #ifndef OLExactGIFRepresentation
-    //Implement as Browsers do.
-    //See:  http://nullsleep.tumblr.com/post/16524517190/animated-gif-minimum-frame-delay-browser-compatibility
-    //Also: http://blogs.msdn.com/b/ieinternals/archive/2010/06/08/animated-gifs-slow-down-to-under-20-frames-per-second.aspx
+   
     
     if (frameDuration < 0.02 - FLT_EPSILON) {
         frameDuration = 0.1;
@@ -186,8 +183,8 @@ static int _prefetchedNum = 10;
         self.frameDurations[i] = frameDuration;
         self.totalDuration += frameDuration;
     }
-    //CFTimeInterval start = CFAbsoluteTimeGetCurrent();
-    // Load first frame
+   
+    // 先加载它的frame
     NSUInteger num = MIN(_prefetchedNum, numberOfFrames);
     for (int i=0; i<num; i++) {
         CGImageRef image = CGImageSourceCreateImageAtIndex(imageSource, i, NULL);
