@@ -15,19 +15,18 @@
 ///-----------------------
 
 /**
- A C array containing the frame durations.
- 
- The number of frames is defined by the count of the `images` array property.
+ 动画时间
+ 默认是frames的个数
  */
 @property (nonatomic, readonly) NSTimeInterval *frameDurations;
 
 /**
- Total duration of the animated image.
+ 总时间
  */
 @property (nonatomic, readonly) NSTimeInterval totalDuration;
 
 /**
- Number of loops the image can do before it stops
+动画停止之前loops图片的数量
  */
 @property (nonatomic, readonly) NSUInteger loopCount;
 
